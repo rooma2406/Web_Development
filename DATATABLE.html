@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+	<title>Datatable</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+	
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+		google.charts.load("current", {packages:["timeline"]});   // load the Visualisation API and the chart package
+		google.charts.setOnLoadCallback(drawChart);               // set a callback to run when the Google Vizualisation API is loaded. 
+		function drawChart() {                                   // to create and populate the data table, generate a chart and draw it.
+		var container = document.getElementById('example2.1');
+		var chart = new google.visualization.Timeline(container);
+		var dataTable = new google.visualization.DataTable();
+
+		// create the data table.
+		
+		dataTable.addColumn({ type: 'string', id: 'Term' });
+		dataTable.addColumn({ type: 'string', id: 'Name' });
+		dataTable.addColumn({ type: 'date', id: 'Start' });
+		dataTable.addColumn({ type: 'date', id: 'End' });
+
+		dataTable.addRows([
+		[ '1', 'Shubham', new Date(2019, 8, 1,0,0,0,), new Date(2019, 8, 7,0,0,0,) ],
+		[ '2', 'Shubham', new Date(2019, 8, 26,0,0,0,),  new Date(2019, 8, 28,0,0,0,) ],
+		[ '3', 'Vivek',  new Date(2019, 8, 9,0,0,0,),  new Date(2019, 8, 12,0,0,0,) ],
+		[ '4', 'Priya',  new Date(2019, 8, 10,0,0,0,),  new Date(2019, 8, 12,0,0,0,) ],
+		[ '5', 'Rohan',  new Date(2019, 8, 17,0,0,0,),  new Date(2019, 8, 19,0,0,0,) ],
+		[ '6', 'Rohan',  new Date(2019, 8, 27,0,0,0,),  new Date(2019, 8, 29,0,0,0,) ],
+		[ '7', 'Swati',  new Date(2019, 8, 13,0,0,0,),  new Date(2019, 8, 14,0,0,0,) ],
+		[ '8', 'Swati',  new Date(2019, 8, 29,0,0,0,),  new Date(2019, 8, 29,0,0,0,) ],
+		[ '9', 'Prakash',  new Date(2019, 8, 3,0,0,0,),  new Date(2019, 8, 7,0,0,0,) ],
+		[ '10', 'Abhishek',  new Date(2019, 8, 11,0,0,0,),  new Date(2019, 8, 11,0,0,0,) ],
+		[ '11', 'Pradeep',  new Date(2019, 8, 9,0,0,0,),  new Date(2019, 8, 13,0,0,0,) ],
+		[ '12', 'Pradeep',  new Date(2019, 8, 28,0,0,0,),  new Date(2019, 8, 28,0,0,0,) ],
+		[ '13', 'Suhas',  new Date(2019, 8, 20,0,0,0,),  new Date(2019, 8, 23,0,0,0,) ],
+		[ '14', 'Vishnu',  new Date(2019, 8, 25,0,0,0,),  new Date(2019, 8, 27,0,0,0,) ],
+		[ '15', 'Neha',  new Date(2019, 8, 25,0,0,0,),  new Date(2019, 8, 28,0,0,0,) ]]);
+
+		chart.draw(dataTable);
+		}
+    </script>
+<style>
+body
+{
+    counter-reset: Count-Value;     
+}
+table
+{
+    border-collapse: separate;
+}
+tr td:first-child:before
+{
+  counter-increment: Count-Value;   
+  content: "" counter(Count-Value);
+}
+
+
+
+</style>
+    
+  </head>
+  <body>
+    
+    <div id="example2.1" class="container mb-3 mt-3" style="height: 800px;"></div>
+	
+	<div class="container mb-3 mt-3 ">
+	  
+		<table class="table " style="width: 100%" >
+		
+			<thead>
+				<tr>
+					
+					<th colspan="2"><b>Intern-Assignment</b></th>
+					<th style="color:#4863A0; font-weight: normal;" >Start-Date</th>
+					<th style="color:#4863A0; font-weight: normal;">Due-Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i>  &nbsp;&nbsp; Shubham</td>
+					<td>01/Sep</td>
+					<td>07/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Shubham</td>
+					<td>26/Sep</td>
+					<td>28/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> &nbsp;&nbsp; Vivek</td>
+					<td>09/Sep</td>
+					<td>12/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> &nbsp;&nbsp; Priya</td>
+					<td>10/Sep</td>
+					<td>12/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> &nbsp;&nbsp; Rohan</td>
+					<td>17/Sep</td>
+					<td>19/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Rohan</td>
+					<td>27/Sep</td>
+					<td>29/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> &nbsp;&nbsp; Swati</td>
+					<td>13/Sep</td>
+					<td>14/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Swati</td>
+					<td>29/Sep</td>
+					<td>29/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> &nbsp;&nbsp;  prakash</td>
+					<td>03/Sep</td>
+					<td>07/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> abhishek</td>
+					<td>11/Sep</td>
+					<td>11/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Pradeep</td>
+					<td>09/Sep</td>
+					<td>13/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Pradeep</td>
+					<td>28/Sep</td>
+					<td>28/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> suhas</td>
+					<td>20/Sep</td>
+					<td>23/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> Vishnu</td>
+					<td>25/Sep</td>
+					<td>27/Sep</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> neha</td>
+					<td>25/Sep</td>
+					<td>28/Sep</td>
+				</tr>
+			
+			</tbody>
+			
+		</table>
+	
+	
+	
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<script>
+		$('.mydatatable').DataTable({
+			scrollY: 400,
+			scrollX: true,
+			scrollCollapse: true,
+			paging: false
+		
+		
+		});                                //to scroll the datatable
+	</script>
+  </body>
+</html>
